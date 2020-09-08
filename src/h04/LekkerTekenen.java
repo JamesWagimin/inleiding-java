@@ -36,6 +36,7 @@ public class LekkerTekenen extends Applet {
         g.fillRect(500,650,600,5);
         g.fillRect(500,700,600,5);
         g.fillRect(500,750,600,5);
+        //huis
 
 
 
