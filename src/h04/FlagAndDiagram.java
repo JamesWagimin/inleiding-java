@@ -29,9 +29,40 @@ public class FlagAndDiagram extends Applet {
         //body
 
         g.fillRect(300,110,500,1);
+        g.drawString("80",270,110);
+
         g.fillRect(300,210,500,1);
+        g.drawString("60",270,210);
+
         g.fillRect(300,310,500,1);
+        g.drawString("40",270,310);
+
         g.fillRect(300,410,500,1);
+        g.drawString("20",270,410);
+
+        g.drawString("Gewicht in KG",150,500);
+
+
+        g.drawString("Jeroen",525,550);
+        g.drawString("Valerie",385,550);
+        g.drawString("Hans",695,550);
+
+        g.setColor(Color.green);
+        g.fillRect(510,10,75,500);
+        //jeroen
+
+        g.setColor(Color.red);
+        g.fillRect(370,310,75,200);
+        //valerie
+
+        g.setColor(Color.magenta);
+        g.fillRect(670,110,75,400);
+        //hans
+
+
+
+
+
 
 
     }
