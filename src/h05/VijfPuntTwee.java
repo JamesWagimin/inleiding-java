@@ -14,12 +14,12 @@ public class VijfPuntTwee extends Applet {
     public void init() {
         xasgrafiek = 150;
 
-        gewichtValerie = 80;
+        gewichtValerie = 60;
         minasVal = 100 - gewichtValerie;
         yasVal = 10 + minasVal * 5 ;
         heightVal = 510 - yasVal;
 
-        gewichtJeroen = 50;
+        gewichtJeroen = 20;
         minasJer = 100 - gewichtJeroen;
         yasJer = 10 + minasJer * 5;
         heightJer = 510 - yasJer;
