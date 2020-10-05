@@ -14,38 +14,37 @@ public class AchtPuntEen extends Applet {
         tekstvakje = new TextField("klik hier", 20);
         knopOkay = new Button("enter");
         knopReset = new Button("reset");
-        KnopListener listenOkay = new KnopListener();
-        KnopListener listenReset = new KnopListener();
+        knoplistener1 ab = new knoplistener1();
+        knoplistener2 cd = new knoplistener2();
+        knopOkay.addActionListener(ab);
+        knopReset.addActionListener(cd);
 
-        knopOkay.addActionListener(listenOkay);
-        knopReset.addActionListener(listenReset);
         add(tekstvakje);
         add(knopOkay);
         add(knopReset);
         schermtekst = "";
-
-
-
-
     }
-
 
     @Override
     public void paint(Graphics g) {
-
-
-
-
+        g.drawString(schermtekst,60,80);
     }
 
-
-    class KnopListener implements ActionListener {
+    class knoplistener1 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            schermtekst = "deze knop doet iets";
+            schermtekst = tekstvakje.getText();
+            repaint();
         }
     }
 
 
+    class knoplistener2 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            tekstvakje.setText("");
+            repaint();
+        }
+    }
 
 }
