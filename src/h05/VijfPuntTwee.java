@@ -14,17 +14,17 @@ public class VijfPuntTwee extends Applet {
     public void init() {
         xasgrafiek = 150;
 
-        gewichtValerie = 60;
+        gewichtValerie = 55;
         minasVal = 100 - gewichtValerie;
         yasVal = 10 + minasVal * 5 ;
         heightVal = 510 - yasVal;
 
-        gewichtJeroen = 20;
+        gewichtJeroen = 71;
         minasJer = 100 - gewichtJeroen;
         yasJer = 10 + minasJer * 5;
         heightJer = 510 - yasJer;
 
-        gewichtHans = 60;
+        gewichtHans = 69;
         minasHans = 100 - gewichtHans;
         yasHans = 10 + minasHans * 5;
         heightHans = 510 - yasHans;
@@ -59,9 +59,9 @@ public class VijfPuntTwee extends Applet {
         g.drawString("Gewicht in KG",10,500);
 
 
-        g.drawString("Jeroen",375,550);
-        g.drawString("Valerie",235,550);
-        g.drawString("Hans",545,550);
+        g.drawString("Thierry",375,550);
+        g.drawString("Lisa",235,550);
+        g.drawString("Sem",545,550);
 
         g.setColor(Color.green);
         g.fillRect(360,yasJer,75,heightJer);

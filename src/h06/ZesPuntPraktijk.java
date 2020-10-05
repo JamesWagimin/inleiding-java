@@ -35,7 +35,7 @@ public class ZesPuntPraktijk extends Applet {
     @Override
     public void paint(Graphics g) {
 
-        String midstring= a + " + " + b + " + " + c + " : " + d + " = " + gemiddelde;
+        String midstring= "("+a + " + " + b + " + " + c+ ")" + " : " + d + " = " + gemiddelde;
         g.drawString(midstring, 10,10);
 
         g.drawString(String.valueOf(gemiddelde),10,30);
