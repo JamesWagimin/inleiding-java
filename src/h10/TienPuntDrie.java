@@ -6,38 +6,67 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TienPuntDrie extends Applet {
-    TextField vak;
-    Label label;
-    String s, text;
-    int maand;
+    TextField vak, vak2;
+    Label label, label2;
+    String s, text,s2, text2, schrik, line;
+    int maand, jaar;
+    Button button;
 
     public void init() {
-vak = new TextField("",10);
-label = new Label("typ het maandnummer");
-vak.addActionListener(new VakListener());
-text ="";
+vak = new TextField("",2);
+label = new Label("maandnummer");
+vak2 = new TextField("",4);
+label2 = new Label("jaar: ");
+button = new Button("check");
 
+vak.addActionListener(new VakListener());
+vak2.addActionListener(new Vak2Listener());
+button.addActionListener(new ButtonListener());
+text ="";
+text2="";
+
+
+add(label2);
+add(vak2);
 add(label);
 add(vak);
+add(button);
 
     }
 
     public void paint(Graphics g) {
         g.drawString(text,50,100);
+        g.drawString(text2,50,120);
+
 
     }
+    class Vak2Listener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            s2 = vak2.getText();
+            jaar = Integer.parseInt(s2);
 
+            if ((jaar % 4 == 0 && !(jaar % 100 == 0)) || jaar % 400 == 0) {
+                schrik = " 29 ";
+                text2 = "het is een schrikkeljaar";
+            } else {
+                schrik = " 28 ";
+                text2 = "het is geen schrikkeljaar";
+
+            }
+        }
+    }
    class VakListener implements ActionListener {
        public void actionPerformed(ActionEvent e) {
            s = vak.getText();
            maand = Integer.parseInt(s);
+
 
            switch (maand){
                case 1:
                    text = "januari heeft 31 dagen";
                    break;
                case 2:
-                   text = "februari heeft 28 dagen";
+                   text = "februari heeft" + schrik + "dagen";
                    break;
                case 3:
                    text = "maart heeft 31 dagen";
@@ -73,8 +102,12 @@ add(vak);
                    text = "Er zitten maar 12 maanden in een jaar";
                    break;
            }
-           repaint();
-
+       }
+   }
+   class ButtonListener implements ActionListener{
+       public void actionPerformed(ActionEvent e) {
+line= text + text2;
+repaint();
        }
    }
 
