@@ -3,7 +3,7 @@ package h11;
 import java.applet.Applet;
 import java.awt.*;
 
-public class test2 extends Applet {
+public class ZUitlegWhile extends Applet {
 
 
     public void init() {
