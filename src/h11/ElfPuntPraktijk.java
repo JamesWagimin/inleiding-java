@@ -27,7 +27,9 @@ add(button);
     }
 
     public void paint(Graphics g) {
-
+        //lokaal declareren thx
+        y = 0;
+        tel = 0;
         while(tel < 10) {
             tel+= 1;
             y+= 20;
@@ -46,9 +48,10 @@ add(button);
 
 class Buttonlist implements ActionListener{
     public void actionPerformed(ActionEvent e) {
-s = vak.getText();
-output = Integer.parseInt(s);
-repaint();
+        s = vak.getText();
+        input = Integer.parseInt(s);
+        System.out.println(input);
+        repaint();
 
     }
 }
