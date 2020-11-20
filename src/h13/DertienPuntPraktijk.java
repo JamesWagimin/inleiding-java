@@ -11,7 +11,7 @@ setSize(900,900);
     }
 
     public void paint(Graphics g) {
-Bos(g, 5,10,75,75 );
+Bos(g, 5,10,50,75 );
 
     }
 
@@ -38,7 +38,7 @@ Bos(g, 5,10,75,75 );
             for(int kolom = 0; kolom < kolomaantal; kolom++){
                 for(int rij = 0; rij< rijaantal; rij++) {
                     if (rij % 2 == 0) {
-                        Boom(_g,kolom * tussenboomx + (int) (0.5 * tussenboomx), rij * tussenboomy);
+                        Boom(_g,kolom * tussenboomx, rij * tussenboomy);
                     } else {
                         Boom(_g,kolom * tussenboomx, rij * tussenboomy);
                     }
